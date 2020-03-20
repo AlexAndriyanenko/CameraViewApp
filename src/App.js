@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect, useState} from 'react';
+import './App.scss';
+import Camera from "./components/Camera/Camera";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { MOBILE_BREAKPOINT } from "./utils/constants";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+       const w = window.innerWidth || window.offsetWidth;
+
+       if (w < MOBILE_BREAKPOINT) {
+           setIsMobile(true);
+       }
+
+    }, [isMobile]);
+
+	return (
+            <Camera isMobile={isMobile} />
+    );
+};
 
 export default App;
