@@ -7,6 +7,7 @@ import Col from 'react-bootstrap/Col';
 import ImageOverlay from '../ImageOverlay/ImageOverlay';
 import { faExchangeAlt } from "@fortawesome/free-solid-svg-icons/faExchangeAlt";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { toast } from "react-toastify";
 import './styles.scss';
 
 const Camera = ({ isMobile }) => {
@@ -31,6 +32,14 @@ const Camera = ({ isMobile }) => {
 
 					video.play();
 				};
+
+				toast.success('Camera works fine!', { position: toast.POSITION.TOP_RIGHT });
+			})
+			.catch((e) => {
+				toast.error(`
+				An ${e.name} error has occurred: 
+				source: ${e.constraint}
+				`, { position: toast.POSITION.TOP_RIGHT });
 			})
 	}, [stopped, front, isMobile]);
 
