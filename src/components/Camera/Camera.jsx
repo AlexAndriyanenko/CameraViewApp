@@ -32,8 +32,6 @@ const Camera = ({ isMobile }) => {
 
 					video.play();
 				};
-
-				toast.success('Camera works fine!', { position: toast.POSITION.TOP_RIGHT });
 			})
 			.catch((e) => {
 				toast.error(`
