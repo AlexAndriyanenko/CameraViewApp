@@ -16,7 +16,7 @@ const Camera = ({ isMobile }) => {
 		const constraints = CAMERA_CONSTRAINTS;
 
 		if (isMobile) {
-			constraints.video.facingMode = front ? 'user' : 'environment';
+			constraints.video.facingMode = front ? 'user' : { exact: 'environment' };
 		}
 
 		window.navigator.mediaDevices.getUserMedia(constraints)
@@ -32,7 +32,7 @@ const Camera = ({ isMobile }) => {
 					video.play();
 				};
 			})
-	}, [stopped, front]);
+	}, [stopped, front, isMobile]);
 
 	const handleButtonClick = () => {
 		setStopped(s => !s);
@@ -47,6 +47,7 @@ const Camera = ({ isMobile }) => {
 			<Row className="justify-content-md-center mb-5">
 				<Col className="d-flex justify-content-center">
 					<video id="video">
+						Your browser doesn't support this feature.
 					</video>
 				</Col>
 			</Row>
