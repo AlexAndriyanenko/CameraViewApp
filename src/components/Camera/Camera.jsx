@@ -19,7 +19,7 @@ const Camera = ({ isMobile }) => {
 			constraints.facingMode = front ? 'user' : 'environment';
 		}
 
-		window.navigator.mediaDevices.getUserMedia(CAMERA_CONSTRAINTS)
+		window.navigator.mediaDevices.getUserMedia(constraints)
 			.then((stream) => {
 				const video = document.getElementById('video');
 				video.srcObject = stream;
@@ -38,11 +38,15 @@ const Camera = ({ isMobile }) => {
 		setStopped(s => !s);
 	};
 
+	const handleCameraChange = () => {
+		setFront(f => !f);
+	};
+
 	return (
 		<Container className="camera-container" fluid="md">
 			<Row className="justify-content-md-center mb-5">
 				<Col className="d-flex justify-content-center">
-					<video id="video" controls>
+					<video id="video">
 					</video>
 				</Col>
 			</Row>
@@ -61,7 +65,7 @@ const Camera = ({ isMobile }) => {
 					</div>
 
 					{isMobile && (
-						<div>
+						<div onClick={handleCameraChange}>
 							<Button varian="light">
 								<FontAwesomeIcon icon={faExchangeAlt} />
 							</Button>
