@@ -16,7 +16,7 @@ const Camera = ({ isMobile }) => {
 		const constraints = CAMERA_CONSTRAINTS;
 
 		if (isMobile) {
-			constraints.facingMode = front ? 'user' : 'environment';
+			constraints.video.facingMode = front ? 'user' : 'environment';
 		}
 
 		window.navigator.mediaDevices.getUserMedia(constraints)
@@ -32,7 +32,7 @@ const Camera = ({ isMobile }) => {
 					video.play();
 				};
 			})
-	}, [stopped]);
+	}, [stopped, front]);
 
 	const handleButtonClick = () => {
 		setStopped(s => !s);
