@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "47f129e8ea03a6345d374656721bbffc",
+    "revision": "a4f6ece0731818c5bc399e09c22f3e25",
     "url": "/CameraViewApp/index.html"
   },
   {
-    "revision": "20469c56a4059047005e",
+    "revision": "357ffb927fe3666e5888",
     "url": "/CameraViewApp/static/css/2.f39ea103.chunk.css"
   },
   {
-    "revision": "3d9178cd4c322bcadf86",
+    "revision": "dbc9062111d99d570e48",
     "url": "/CameraViewApp/static/css/main.8e865e89.chunk.css"
   },
   {
-    "revision": "20469c56a4059047005e",
-    "url": "/CameraViewApp/static/js/2.ddea0284.chunk.js"
+    "revision": "357ffb927fe3666e5888",
+    "url": "/CameraViewApp/static/js/2.a3c903da.chunk.js"
   },
   {
     "revision": "5af347742f42e9ec31fd232ea0d01565",
-    "url": "/CameraViewApp/static/js/2.ddea0284.chunk.js.LICENSE.txt"
+    "url": "/CameraViewApp/static/js/2.a3c903da.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3d9178cd4c322bcadf86",
-    "url": "/CameraViewApp/static/js/main.e9855f56.chunk.js"
+    "revision": "dbc9062111d99d570e48",
+    "url": "/CameraViewApp/static/js/main.fe147221.chunk.js"
   },
   {
     "revision": "03cfe5c2a5ad8e183a1b",
