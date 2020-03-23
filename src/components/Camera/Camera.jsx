@@ -1,20 +1,26 @@
 import React, {useState} from 'react';
 import Webcam from 'react-webcam';
-import { CAMERA_CONSTRAINTS } from "../../utils/constants";
+import {CAMERA_CONSTRAINTS} from "../../utils/constants";
 import Button from 'react-bootstrap/Button';
 import Container from "react-bootstrap/Container";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ImageOverlay from '../ImageOverlay/ImageOverlay';
-import { faExchangeAlt } from "@fortawesome/free-solid-svg-icons/faExchangeAlt";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faExchangeAlt} from "@fortawesome/free-solid-svg-icons/faExchangeAlt";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { toast } from "react-toastify";
 import './styles.scss';
 
-const Camera = ({ isMobile }) => {
+const Camera = ({isMobile}) => {
 	const [front, setFront] = useState(false);
 
 	const handleCameraChange = () => {
 		setFront(f => !f);
+	};
+
+	const showUserMediaError = (e) => {
+		const errorMsg = `${e.name}: ${e.message}`;
+		toast.error(errorMsg, { position: toast.POSITION.TOP_RIGHT });
 	};
 
 	const getConstraints = () => {
@@ -22,19 +28,13 @@ const Camera = ({ isMobile }) => {
 		if (isMobile) {
 			constraints = {
 				...constraints,
-				video: {
-					...CAMERA_CONSTRAINTS.video,
-					facingMode: front ? 'user' : { exact: 'environment' }
-				}
+				facingMode: front ? 'user' : { exact: 'environment' },
 			};
 
-		}   else {
+		} else {
 			constraints = {
 				...constraints,
-				video: {
-					...CAMERA_CONSTRAINTS.video,
-					facingMode: 'user',
-				}
+				facingMode: 'user',
 			};
 		}
 
@@ -48,6 +48,7 @@ const Camera = ({ isMobile }) => {
 					<Webcam
 						audio={false}
 						videoConstraints={getConstraints()}
+						onUserMedia={showUserMediaError}
 					/>
 				</Col>
 			</Row>
@@ -56,14 +57,14 @@ const Camera = ({ isMobile }) => {
 					{isMobile && (
 						<div onClick={handleCameraChange}>
 							<Button varian="light">
-								<FontAwesomeIcon icon={faExchangeAlt} />
+								<FontAwesomeIcon icon={faExchangeAlt}/>
 							</Button>
 						</div>
 					)}
 				</Col>
 			</Row>
 
-			<ImageOverlay />
+			<ImageOverlay/>
 		</Container>
 	)
 };
