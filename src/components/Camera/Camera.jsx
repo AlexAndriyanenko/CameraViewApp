@@ -8,7 +8,7 @@ import Col from 'react-bootstrap/Col';
 import ImageOverlay from '../ImageOverlay/ImageOverlay';
 import {faExchangeAlt} from "@fortawesome/free-solid-svg-icons/faExchangeAlt";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import { toast } from "react-toastify";
+import {toast} from "react-toastify";
 import './styles.scss';
 
 const Camera = ({isMobile}) => {
@@ -20,7 +20,7 @@ const Camera = ({isMobile}) => {
 
 	const showUserMediaError = (e) => {
 		const errorMsg = `${e.name}: ${e.message}`;
-		toast.error(errorMsg, { position: toast.POSITION.TOP_RIGHT });
+		toast.error(errorMsg, {position: toast.POSITION.TOP_RIGHT});
 	};
 
 	const getConstraints = () => {
@@ -28,14 +28,21 @@ const Camera = ({isMobile}) => {
 		if (isMobile) {
 			constraints = {
 				...constraints,
-				facingMode: front ? 'user' : { exact: 'environment' },
+				video: {
+					...constraints.video,
+					facingMode: front ? 'user' : {exact: 'environment'},
+				},
+				facingMode: front ? 'user' : {exact: 'environment'},
 			};
-
 		} else {
 			constraints = {
 				...constraints,
+				video: {
+					...constraints.video,
+					facingMode: 'user',
+				},
 				facingMode: 'user',
-			};
+			}
 		}
 
 		return constraints;
@@ -46,6 +53,7 @@ const Camera = ({isMobile}) => {
 			<Row className="justify-content-md-center mb-5">
 				<Col className="d-flex justify-content-center">
 					<Webcam
+						className="video-container"
 						audio={false}
 						videoConstraints={getConstraints()}
 						onUserMedia={showUserMediaError}
