@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/CameraViewApp/static/css/main.17e572ba.chunk.css",
-    "main.js": "/CameraViewApp/static/js/main.98ca0a6c.chunk.js",
-    "main.js.map": "/CameraViewApp/static/js/main.98ca0a6c.chunk.js.map",
+    "main.css": "/CameraViewApp/static/css/main.78b3ecf1.chunk.css",
+    "main.js": "/CameraViewApp/static/js/main.bc42d2ae.chunk.js",
+    "main.js.map": "/CameraViewApp/static/js/main.bc42d2ae.chunk.js.map",
     "runtime-main.js": "/CameraViewApp/static/js/runtime-main.1ad40e12.js",
     "runtime-main.js.map": "/CameraViewApp/static/js/runtime-main.1ad40e12.js.map",
     "static/css/2.f39ea103.chunk.css": "/CameraViewApp/static/css/2.f39ea103.chunk.css",
-    "static/js/2.9e36634b.chunk.js": "/CameraViewApp/static/js/2.9e36634b.chunk.js",
-    "static/js/2.9e36634b.chunk.js.map": "/CameraViewApp/static/js/2.9e36634b.chunk.js.map",
+    "static/js/2.a3c903da.chunk.js": "/CameraViewApp/static/js/2.a3c903da.chunk.js",
+    "static/js/2.a3c903da.chunk.js.map": "/CameraViewApp/static/js/2.a3c903da.chunk.js.map",
     "index.html": "/CameraViewApp/index.html",
-    "precache-manifest.98a82795c8bafc35a9eb02f3d9b18c86.js": "/CameraViewApp/precache-manifest.98a82795c8bafc35a9eb02f3d9b18c86.js",
+    "precache-manifest.56fda15f8a1b4ee1ea28f6b56d2d9bf7.js": "/CameraViewApp/precache-manifest.56fda15f8a1b4ee1ea28f6b56d2d9bf7.js",
     "service-worker.js": "/CameraViewApp/service-worker.js",
     "static/css/2.f39ea103.chunk.css.map": "/CameraViewApp/static/css/2.f39ea103.chunk.css.map",
-    "static/css/main.17e572ba.chunk.css.map": "/CameraViewApp/static/css/main.17e572ba.chunk.css.map",
-    "static/js/2.9e36634b.chunk.js.LICENSE.txt": "/CameraViewApp/static/js/2.9e36634b.chunk.js.LICENSE.txt",
+    "static/css/main.78b3ecf1.chunk.css.map": "/CameraViewApp/static/css/main.78b3ecf1.chunk.css.map",
+    "static/js/2.a3c903da.chunk.js.LICENSE.txt": "/CameraViewApp/static/js/2.a3c903da.chunk.js.LICENSE.txt",
     "static/media/ring.png": "/CameraViewApp/static/media/ring.d7654c97.png"
   },
   "entrypoints": [
     "static/js/runtime-main.1ad40e12.js",
     "static/css/2.f39ea103.chunk.css",
-    "static/js/2.9e36634b.chunk.js",
-    "static/css/main.17e572ba.chunk.css",
-    "static/js/main.98ca0a6c.chunk.js"
+    "static/js/2.a3c903da.chunk.js",
+    "static/css/main.78b3ecf1.chunk.css",
+    "static/js/main.bc42d2ae.chunk.js"
   ]
 }
