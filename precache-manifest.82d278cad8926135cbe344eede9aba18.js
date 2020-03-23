@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6f4b99f6c6949f55a66ad0f3a9ea4fea",
+    "revision": "a6e6274afa67086c2bd207f570d21cbb",
     "url": "/CameraViewApp/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/CameraViewApp/static/css/2.f39ea103.chunk.css"
   },
   {
-    "revision": "10f46f65ef0255d72497",
+    "revision": "0bd44db851d486d9bdcc",
     "url": "/CameraViewApp/static/css/main.323859cb.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/CameraViewApp/static/js/2.37644a88.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "10f46f65ef0255d72497",
-    "url": "/CameraViewApp/static/js/main.e55cc693.chunk.js"
+    "revision": "0bd44db851d486d9bdcc",
+    "url": "/CameraViewApp/static/js/main.0ce8e538.chunk.js"
   },
   {
     "revision": "03cfe5c2a5ad8e183a1b",
