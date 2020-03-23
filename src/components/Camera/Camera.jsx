@@ -13,8 +13,10 @@ import './styles.scss';
 const Camera = ({isMobile}) => {
 	const [streamCanvas, setStreamCanvas] = useState(false);
 	const [front, setFront] = useState(false);
+	const [base64, setBase64] = useState('');
 	const webcamRef = useRef(null);
 	const canvasRef = useRef(null);
+	const downLoadRef = useRef(null);
 
 	const handleCameraChange = () => {
 		setFront(f => !f);
@@ -50,6 +52,14 @@ const Camera = ({isMobile}) => {
 		setStreamCanvas(true);
 	};
 
+	const handleCaptureImage = () => {
+		const canvas = document.getElementById('canvas');
+		setBase64(canvas.toDataURL());
+		setTimeout(() => {
+			downLoadRef.current.click();
+		},0);
+	};
+
 	return (
 		<Container className="camera-container" fluid="md">
 			<Row className="justify-content-md-center mb-5">
@@ -67,15 +77,20 @@ const Camera = ({isMobile}) => {
 			</Row>
 			<Row className="justify-content-md-center">
 				<Col className="d-flex justify-content-center">
+						<Button onClick={handleCaptureImage}>
+							 Capture
+						</Button>
+				</Col>
+				<Col className="d-flex justify-content-center">
 					{isMobile && (
-						<div onClick={handleCameraChange}>
-							<Button varian="light">
+							<Button onClick={handleCameraChange} varian="light">
 								<FontAwesomeIcon icon={faExchangeAlt}/>
 							</Button>
-						</div>
 					)}
 				</Col>
 			</Row>
+
+			<a ref={downLoadRef} href={base64} download style={{display: 'none'}} />
 		</Container>
 	)
 };
