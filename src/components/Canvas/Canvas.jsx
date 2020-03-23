@@ -13,8 +13,11 @@ class Canvas extends React.Component {
 
 		this.props.video.video.addEventListener('play', () => {
 			const self = this;
-			this.canvas.width = this.props.video.video.videoWidth;
-			this.canvas.height = this.props.video.video.videoHeight;
+			const videoWidth = this.props.video.video.videoWidth;
+			const videoHeight = this.props.video.video.videoHeight;
+
+			this.canvas.width = videoWidth;
+			this.canvas.height = videoHeight;
 
 			const imgWidth = 100;
 			const imgHeight = 100;
@@ -22,13 +25,23 @@ class Canvas extends React.Component {
 			const posX = this.canvas.width / 2 - imgWidth / 2;
 			const posY = this.canvas.height / 2 - imgHeight / 2;
 
-			(function loop() {
+			const sourceX = 5;
+			const sourceY = 5;
+			const sourceWidth = videoWidth - sourceX;
+			const sourceHeight = videoHeight;
+			const destX = 5;
+			const destY = 5;
+			const destWidth = this.canvas.width - 10;
+			const destHeight = this.canvas.height - 5;
 
-				ctx.drawImage(self.props.video.video, 0, 0);
+			const loop = () => {
+				ctx.drawImage(self.props.video.video, sourceX, sourceY, sourceWidth, sourceHeight, destX, destY, destWidth, destHeight);
 				ctx.drawImage(self.image, posX, posY, imgWidth, imgHeight);
-				setTimeout(loop, 1000 / 30);
-			})();
-		}, 0);
+				requestAnimationFrame(loop);
+			};
+
+			loop();
+		});
 	}
 
 	render() {
