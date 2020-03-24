@@ -64,7 +64,7 @@ const Camera = ({isMobile}) => {
 	return (
 		<Container className="camera-container" fluid="md">
 			<Row className="justify-content-md-center mb-5">
-				<Col className="d-flex justify-content-center">
+				<Col className="d-flex justify-content-center image-overlay-container">
 					<Webcam
 						ref={webcamRef}
 						className="video-container"
@@ -73,6 +73,7 @@ const Camera = ({isMobile}) => {
 						onUserMedia={handleUserMediaStart}
 					/>
 					<Canvas ref={canvasRef} {...(streamCanvas && ({video: webcamRef.current}))} />
+					<ImageOverlay/>
 				</Col>
 			</Row>
 			<Row className="justify-content-md-center">
