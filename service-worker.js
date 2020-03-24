@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/CameraViewApp/precache-manifest.106d5267b923c6604d55a7d5227cebac.js"
+  "/CameraViewApp/precache-manifest.4a3e5fa1995cd9f33a614b71f2de3c41.js"
 );
 
 self.addEventListener('message', (event) => {
