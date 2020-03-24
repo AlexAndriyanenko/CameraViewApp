@@ -65,7 +65,6 @@ const Camera = ({isMobile}) => {
 			<Row className="justify-content-md-center mb-5">
 				<Col className="d-flex justify-content-center">
 					<Webcam
-						style={{ display: 'none' }}
 						ref={webcamRef}
 						className="video-container"
 						audio={false}
