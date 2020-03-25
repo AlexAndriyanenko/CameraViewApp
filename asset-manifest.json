@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/CameraViewApp/static/css/main.8a66d66b.chunk.css",
+    "main.css": "/CameraViewApp/static/css/main.9acbcb35.chunk.css",
     "main.js": "/CameraViewApp/static/js/main.84d913b9.chunk.js",
     "main.js.map": "/CameraViewApp/static/js/main.84d913b9.chunk.js.map",
     "runtime-main.js": "/CameraViewApp/static/js/runtime-main.1ad40e12.js",
@@ -9,10 +9,10 @@
     "static/js/2.acd48cf6.chunk.js": "/CameraViewApp/static/js/2.acd48cf6.chunk.js",
     "static/js/2.acd48cf6.chunk.js.map": "/CameraViewApp/static/js/2.acd48cf6.chunk.js.map",
     "index.html": "/CameraViewApp/index.html",
-    "precache-manifest.c9ecee38fad363b8887de4fea961292b.js": "/CameraViewApp/precache-manifest.c9ecee38fad363b8887de4fea961292b.js",
+    "precache-manifest.1f018c61c0fa16446eafb0f6d46f75cb.js": "/CameraViewApp/precache-manifest.1f018c61c0fa16446eafb0f6d46f75cb.js",
     "service-worker.js": "/CameraViewApp/service-worker.js",
     "static/css/2.f39ea103.chunk.css.map": "/CameraViewApp/static/css/2.f39ea103.chunk.css.map",
-    "static/css/main.8a66d66b.chunk.css.map": "/CameraViewApp/static/css/main.8a66d66b.chunk.css.map",
+    "static/css/main.9acbcb35.chunk.css.map": "/CameraViewApp/static/css/main.9acbcb35.chunk.css.map",
     "static/js/2.acd48cf6.chunk.js.LICENSE.txt": "/CameraViewApp/static/js/2.acd48cf6.chunk.js.LICENSE.txt",
     "static/media/ring.png": "/CameraViewApp/static/media/ring.d7654c97.png"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.1ad40e12.js",
     "static/css/2.f39ea103.chunk.css",
     "static/js/2.acd48cf6.chunk.js",
-    "static/css/main.8a66d66b.chunk.css",
+    "static/css/main.9acbcb35.chunk.css",
     "static/js/main.84d913b9.chunk.js"
   ]
 }
