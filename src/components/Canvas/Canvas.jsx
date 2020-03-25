@@ -31,8 +31,8 @@ class Canvas extends React.Component {
 		this.canvas.width = videoWidth;
 		this.canvas.height = videoHeight;
 
-		const imgWidth = 100;
-		const imgHeight = 100;
+		const imgWidth = 200;
+		const imgHeight = 200;
 
 		const posX = this.canvas.width / 2 - imgWidth / 2;
 		const posY = this.canvas.height / 2 - imgHeight / 2;
