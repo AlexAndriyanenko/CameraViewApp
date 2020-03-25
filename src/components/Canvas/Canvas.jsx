@@ -67,10 +67,13 @@ class Canvas extends React.Component {
 					<canvas id="canvas" ref={ref => this.canvas = ref}> Your browser doesn't support canvas. </canvas>
 				</Row>
 				<img ref={ref => this.image = ref} src={img} alt="" style={{ display: 'none' }} />
-				<a ref={ref => this.downloadBtn = ref} href={this.state.base64} download style={{display: 'none'}} />
+
 				<Row className="d-flex justify-content-center mb-2">
-					<Button onClick={this.handleCaptureImage}>
+					<Button className="mr-2" onClick={this.handleCaptureImage}>
 						Capture
+					</Button>
+					<Button className="btn btn-success">
+						<a className="text-white" ref={ref => this.downloadBtn = ref} href={this.state.base64} download> Download </a>
 					</Button>
 				</Row>
 			</Container>

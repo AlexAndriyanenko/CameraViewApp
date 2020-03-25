@@ -9,7 +9,7 @@ import adapter from 'webrtc-adapter';
 
 const App = () => {
     const [isMobile, setIsMobile] = useState(false);
-    
+
     useEffect(() => {
        const w = window.innerWidth || window.offsetWidth;
 
