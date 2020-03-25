@@ -49,14 +49,12 @@ class Canvas extends React.Component {
 
 		this.takeCanvasSnapshot();
 
+		if (!this.canvas.toDataUrl()) return;
+
 		this.setState(state => ({
 			...state,
 			base64: this.canvas.toDataURL(),
 		}));
-
-		// setTimeout(() => {
-		// 	this.downloadBtn.click();
-		// }, 0);
 	};
 
 
