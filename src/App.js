@@ -20,7 +20,7 @@ const App = () => {
     }, [isMobile]);
 
 	return (
-	    <div className="app-container">
+	    <div className="app-container mt-1">
             <Camera isMobile={isMobile} />
             <ToastContainer />
         </div>
