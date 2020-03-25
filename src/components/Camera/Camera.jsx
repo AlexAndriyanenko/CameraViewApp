@@ -111,7 +111,7 @@ class Camera extends React.Component  {
 	render() {
 		return (
 			<Container className="camera-container" fluid="md">
-				<Row className="justify-content-md-center mb-5">
+				<Row className="justify-content-md-center mb-2">
 					<Col className="d-flex justify-content-center image-overlay-container">
 						<Webcam
 							ref={this.webcamRef}
@@ -122,10 +122,10 @@ class Camera extends React.Component  {
 						<ImageOverlay/>
 					</Col>
 				</Row>
-				<Row className="justify-content-md-center mb-3">
+				<Row className="justify-content-md-center mb-2">
 					<Col className="d-flex justify-content-center">
 						<Container>
-							<Row className="d-flex justify-content-center mb-3">
+							<Row className="d-flex justify-content-center mb-2">
 								<canvas id="canvas" ref={ref => this.canvasRef = ref}> Your browser doesn't support canvas.</canvas>
 							</Row>
 							<img ref={ref => this.imageRef = ref} src={img} alt="" style={{display: 'none'}}/>
