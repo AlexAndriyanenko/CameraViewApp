@@ -16,6 +16,7 @@ const Camera = ({isMobile}) => {
 	const [front, setFront] = useState(false);
 	const webcamRef = useRef(null);
 	const canvasRef = useRef(null);
+	
 	const handleCameraChange = () => {
 		setFront(f => !f);
 	};
@@ -71,9 +72,9 @@ const Camera = ({isMobile}) => {
 			<Row className="justify-content-md-center">
 				<Col className="d-flex justify-content-center">
 					{isMobile && (
-							<Button onClick={handleCameraChange} varian="light">
-								<FontAwesomeIcon icon={faExchangeAlt}/>
-							</Button>
+						<Button onClick={handleCameraChange} varian="light">
+							<FontAwesomeIcon icon={faExchangeAlt}/>
+						</Button>
 					)}
 				</Col>
 			</Row>
