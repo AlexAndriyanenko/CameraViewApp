@@ -49,8 +49,6 @@ class Canvas extends React.Component {
 
 		this.takeCanvasSnapshot();
 
-		if (!this.canvas.toDataUrl()) return;
-
 		this.setState(state => ({
 			...state,
 			base64: this.canvas.toDataURL(),
@@ -67,12 +65,14 @@ class Canvas extends React.Component {
 				<img ref={ref => this.image = ref} src={img} alt="" style={{ display: 'none' }} />
 
 				<Row className="d-flex justify-content-center mb-2">
-					<Button className="mr-2" onClick={this.handleCaptureImage}>
+					<Button onClick={this.handleCaptureImage}>
 						Capture
 					</Button>
-					<Button className="btn btn-success">
-						<a className="text-white" ref={ref => this.downloadBtn = ref} href={this.state.base64} download> Download </a>
-					</Button>
+					{this.state.base64 && (
+						<Button className="btn btn-success ml-2">
+							<a className="text-white" ref={ref => this.downloadBtn = ref} href={this.state.base64} download> Download </a>
+						</Button>
+					)}
 				</Row>
 			</Container>
 		)
